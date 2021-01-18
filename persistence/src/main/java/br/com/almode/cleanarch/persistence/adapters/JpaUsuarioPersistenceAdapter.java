@@ -4,6 +4,7 @@ import br.com.almode.cleanarch.models.Usuario;
 import br.com.almode.cleanarch.persistence.entities.UsuarioEntity;
 import br.com.almode.cleanarch.persistence.repositories.UsuarioRepository;
 import br.com.almode.cleanarch.usecases.adapters.usuario.UsuarioPersistenceAdapter;
+import br.com.almode.cleanarch.usecases.usecases.usuario.exceptions.IdNotFoundException;
 import br.com.almode.cleanarch.usecases.usecases.usuario.exceptions.UserNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -41,7 +42,7 @@ public class JpaUsuarioPersistenceAdapter implements UsuarioPersistenceAdapter {
     }
 
     @Override
-    public Usuario update(Usuario usuario, UUID idDoUsuario){
+    public Usuario update(UUID idDoUsuario, Usuario usuario){
         var usuarioEntity = this.usuarioRepository
                 .findById(idDoUsuario)
                 .orElseThrow(UserNotFoundException::new);

@@ -46,8 +46,8 @@ public class UsuarioController implements UsuarioResource {
     }
 
     @Override
-    public ResponseEntity<UsuarioPresenter> update(@Valid UpdateUsuarioParams params, String id){
-        var usuario = this.usuarioService.update(params, UUID.fromString(id));
+    public ResponseEntity<UsuarioPresenter> update(String id, @Valid UpdateUsuarioParams params){
+        var usuario = this.usuarioService.update(UUID.fromString(id),params);
         return ResponseEntity.ok(usuario);
     }
 }

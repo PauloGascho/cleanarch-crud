@@ -13,9 +13,9 @@ import java.util.UUID;
 public class UpdateUsuarioUseCase {
     UsuarioPersistenceAdapter usuarioPersistenceAdapter;
 
-    public UsuarioPresenter update(UpdateUsuarioParams params, UUID idDoUsuario) {
+    public UsuarioPresenter update(UUID idDoUsuario, UpdateUsuarioParams params) {
         var usuarioBuscado = new Usuario(params.getNome(), params.getCpf());
-        var usuario = this.usuarioPersistenceAdapter.update(usuarioBuscado, idDoUsuario);
+        var usuario = this.usuarioPersistenceAdapter.update(idDoUsuario, usuarioBuscado);
         return new UsuarioPresenter(usuario);
     }
 

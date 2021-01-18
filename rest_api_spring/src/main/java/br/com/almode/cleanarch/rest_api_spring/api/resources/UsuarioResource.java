@@ -29,5 +29,5 @@ public interface UsuarioResource {
     ResponseEntity<UsuarioPresenter> delete(@PathVariable String id);
 
     @PutMapping("/{id}")
-    ResponseEntity<UsuarioPresenter> update(@RequestBody @Valid UpdateUsuarioParams params, @PathVariable String id);
+    ResponseEntity<UsuarioPresenter> update(@PathVariable String id, @RequestBody @Valid UpdateUsuarioParams params);
 }

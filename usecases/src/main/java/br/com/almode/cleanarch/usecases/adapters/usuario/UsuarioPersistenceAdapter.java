@@ -15,5 +15,5 @@ public interface UsuarioPersistenceAdapter {
     //emplemenentado UD do CRUD
     Usuario delete(UUID idDoUsuario);
 
-    Usuario update(Usuario usuario, UUID idDoUsuario);
+    Usuario update(UUID idDoUsuario, Usuario usuario);
 }

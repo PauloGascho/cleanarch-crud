@@ -51,8 +51,8 @@ public class UsuarioService {
         return this.deleteUsuarioUseCase
                 .delete(idDoUsuario);
     }
-    public UsuarioPresenter update(UpdateUsuarioParams params, UUID idDoUsuario) {
+    public UsuarioPresenter update(UUID idDoUsuario, UpdateUsuarioParams params) {
         return this.updateUsuarioUseCase
-                .update(params,idDoUsuario);
+                .update(idDoUsuario,params);
     }
 }
