@@ -1,0 +1,11 @@
+dependencies {
+    compile project(':usecases')
+    compile project(':models')
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    testCompile 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+}

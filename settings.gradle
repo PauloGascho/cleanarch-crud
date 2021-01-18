@@ -1,0 +1,8 @@
+rootProject.name = 'cleanarch'
+include 'configuration'
+include 'rest_api_spring'
+include 'models'
+include 'in_memory_persistence'
+include 'usecases'
+include 'persistence'
+

@@ -1,0 +1,19 @@
+def springRelease = '2.3.4.RELEASE'
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springRelease
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: springRelease
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: springRelease
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springRelease
+
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    compile project(':usecases')
+}

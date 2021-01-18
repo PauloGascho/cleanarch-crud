@@ -1,0 +1,16 @@
+def springRelease = '2.3.4.RELEASE'
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.4.RELEASE'
+
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    testCompile 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    compile project(':models')
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.3.4.RELEASE'
+    compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.4.1'
+}
