@@ -22,7 +22,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableAutoConfiguration
 public class CleanArchAlmodeApplication {
   public static void main(String[] args){
-    //SpringApplication.run(CleanArchAlmodeApplication.class, args);
-    System.out.println("olá mundo!");
+    SpringApplication.run(CleanArchAlmodeApplication.class, args);
   }
 }
